@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>薬剤師リスキリングサロン | ファーマシストキャンパス</title>
+    <meta name="description" content="薬剤師の市場価値を高めるオンラインサロン。月額3,980円で現役薬剤師から直接学べる。症例検討会・認定研修会が無料。満足度4.93/5点。在宅医療・薬局運営・副業ノウハウを実践的に学ぶ。">
+    <meta property="og:title" content="薬剤師リスキリングサロン | ファーマシストキャンパス">
+    <meta property="og:description" content="月額3,980円で現役薬剤師から直接学べる。症例検討会・認定研修会が無料。満足度4.93/5点。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wiseinc-pharmacy.github.io/pharmacist-campus-lp/reskilling.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-color: #1a2a4a;
+            --accent-color: #5B7FFF;
+            --accent-hover: #4A6BE0;
+            --accent-gradient: linear-gradient(135deg, #5B7FFF, #8B5CF6);
+            --bg-color: #f8f7f4;
+            --white: #ffffff;
+            --text-color: #333333;
+            --light-gray: #e0e0e0;
+            --cta-color: #F0883E;
+            --cta-hover: #E07B2A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--main-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent-gradient);
+            border-radius: 2px;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--cta-color);
+            color: var(--white);
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(240, 136, 62, 0.3);
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--cta-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(240, 136, 62, 0.4);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, #1a2a4a 0%, #2d4a7a 50%, #3d5a8a 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(91, 127, 255, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+            animation: heroFloat 20s ease-in-out infinite;
+        }
+
+        @keyframes heroFloat {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-20px, -20px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--accent-gradient);
+            padding: 8px 24px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+            border-radius: 30px;
+            letter-spacing: 0.1em;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            font-weight: 900;
+        }
+
+        .hero-content h1 .highlight {
+            color: var(--accent-color);
+        }
+
+        .hero-sub {
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            opacity: 0.9;
+        }
+
+        .hero-copy {
+            font-size: 1rem;
+            margin-bottom: 40px;
+            opacity: 0.8;
+            line-height: 2;
+        }
+
+        .hero-points {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .hero-point {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+        }
+
+        .hero-point .check {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        /* ===== ABOUT ===== */
+        .about {
+            background-color: var(--white);
+        }
+
+        .about-lead {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 2;
+        }
+
+        .about-lead .strong-line {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--main-color);
+            display: block;
+            margin: 20px 0;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .about-feature {
+            background: linear-gradient(135deg, #f0f4ff, #f8f7f4);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(91, 127, 255, 0.1);
+        }
+
+        .about-feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .about-feature h3 {
+            font-size: 1.1rem;
+            color: var(--main-color);
+            margin-bottom: 10px;
+        }
+
+        .about-feature p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* ===== PAIN ===== */
+        .pain {
+            background-color: var(--bg-color);
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .pain-card {
+            background-color: var(--white);
+            padding: 24px 30px;
+            border-left: 5px solid var(--accent-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .pain-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .pain-card .problem {
+            font-weight: bold;
+            color: var(--main-color);
+        }
+
+        .pain-card .solution {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .pain-footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* ===== WHY ===== */
+        .why {
+            background: var(--main-color);
+            color: var(--white);
+        }
+
+        .why h2 {
+            color: var(--white);
+        }
+
+        .why-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .why-content p {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            line-height: 2;
+        }
+
+        .why-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .why-pillar {
+            background: rgba(255,255,255,0.1);
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.15);
+            text-align: center;
+        }
+
+        .why-pillar-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        /* ===== VOICE ===== */
+        .voice {
+            background-color: var(--white);
+        }
+
+        .voice-score {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .voice-score .big-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--accent-color);
+            line-height: 1;
+        }
+
+        .voice-score .score-unit {
+            font-size: 1.5rem;
+            color: var(--main-color);
+        }
+
+        .voice-score .score-sub {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        .voice-stars {
+            color: #FFD700;
+            font-size: 1.8rem;
+            letter-spacing: 4px;
+            margin-bottom: 8px;
+        }
+
+        .voice-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .voice-card {
+            background: #f8f9ff;
+            padding: 28px;
+            border-radius: 16px;
+            position: relative;
+            border: 1px solid rgba(91, 127, 255, 0.1);
+        }
+
+        .voice-card::before {
+            content: '\201C';
+            font-size: 4rem;
+            color: rgba(91, 127, 255, 0.15);
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            line-height: 1;
+        }
+
+        .voice-card p {
+            position: relative;
+            z-index: 1;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .voice-output {
+            max-width: 600px;
+            margin: 50px auto 0;
+            text-align: center;
+        }
+
+        .voice-output h3 {
+            font-size: 1.2rem;
+            color: var(--main-color);
+            margin-bottom: 20px;
+        }
+
+        .output-bars {
+            text-align: left;
+        }
+
+        .output-bar {
+            margin-bottom: 16px;
+        }
+
+        .output-bar-label {
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+
+        .output-bar-track {
+            background: #e8ecf4;
+            border-radius: 10px;
+            height: 28px;
+            overflow: hidden;
+        }
+
+        .output-bar-fill {
+            height: 100%;
+            background: var(--accent-gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            color: var(--white);
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        /* ===== OUTPUT ===== */
+        .output {
+            background-color: var(--bg-color);
+        }
+
+        .output-sections {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .output-section {
+            background: var(--white);
+            padding: 36px;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        .output-section h3 {
+            font-size: 1.3rem;
+            color: var(--main-color);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .output-section h3 .icon {
+            font-size: 1.5rem;
+        }
+
+        .output-section blockquote {
+            background: #f8f9ff;
+            padding: 20px;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
+            font-size: 0.95rem;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* ===== URGENCY ===== */
+        .urgency {
+            background: linear-gradient(135deg, #1a2a4a, #2d4a7a);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .urgency h2 {
+            color: var(--white);
+        }
+
+        .urgency-items {
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .urgency-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            margin-bottom: 12px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            text-align: left;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .urgency-icon {
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .urgency-item p {
+            font-size: 1.05rem;
+        }
+
+        .urgency-cta {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        /* ===== INSTRUCTOR ===== */
+        .instructor {
+            background-color: var(--white);
+        }
+
+        .instructor-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+        }
+
+        .instructor-card {
+            background: var(--bg-color);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .instructor-avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: var(--accent-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 3rem;
+            color: var(--white);
+        }
+
+        .instructor-nickname {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .instructor-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--main-color);
+            margin-bottom: 16px;
+        }
+
+        .instructor-bio {
+            font-size: 0.95rem;
+            text-align: left;
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .instructor-certs {
+            text-align: left;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .instructor-certs li {
+            margin-bottom: 4px;
+            list-style: none;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .instructor-certs li::before {
+            content: '|';
+            position: absolute;
+            left: 4px;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .instructor-link {
+            display: inline-block;
+            margin-top: 16px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        .instructor-link:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== COMPARISON ===== */
+        .comparison {
+            background-color: var(--bg-color);
+        }
+
+        .comp-table {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            overflow-x: auto;
+        }
+
+        .comp-table table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        .comp-table th,
+        .comp-table td {
+            padding: 16px 20px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.95rem;
+        }
+
+        .comp-table thead th {
+            background: var(--main-color);
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        .comp-table thead th.ours {
+            background: var(--accent-color);
+        }
+
+        .comp-table tbody td:first-child {
+            text-align: left;
+            font-weight: bold;
+            color: var(--main-color);
+        }
+
+        .comp-table tbody td.ours {
+            background: rgba(91, 127, 255, 0.05);
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .advantages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .advantage {
+            background: var(--white);
+            padding: 28px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .advantage-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .advantage h3 {
+            font-size: 1.1rem;
+            color: var(--main-color);
+            margin-bottom: 10px;
+        }
+
+        .advantage p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* ===== PLAN ===== */
+        .plan {
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .plan-card {
+            max-width: 500px;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #f0f4ff, #f8f7ff);
+            border-radius: 24px;
+            padding: 50px 40px;
+            border: 2px solid var(--accent-color);
+            box-shadow: 0 8px 30px rgba(91, 127, 255, 0.15);
+        }
+
+        .plan-name {
+            font-size: 1rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .plan-title {
+            font-size: 1.4rem;
+            color: var(--main-color);
+            font-weight: bold;
+            margin-bottom: 24px;
+        }
+
+        .plan-price {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--main-color);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .plan-price .yen {
+            font-size: 1.5rem;
+        }
+
+        .plan-price .per {
+            font-size: 1rem;
+            font-weight: normal;
+            color: #666;
+        }
+
+        .plan-bonus {
+            background: var(--cta-color);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            margin: 20px 0 30px;
+            display: inline-block;
+        }
+
+        .plan-features {
+            text-align: left;
+            max-width: 360px;
+            margin: 0 auto 30px;
+        }
+
+        .plan-features li {
+            list-style: none;
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(91, 127, 255, 0.1);
+        }
+
+        .plan-features li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .plan-note {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 16px;
+        }
+
+        /* ===== IMPROVEMENTS ===== */
+        .improvements {
+            background-color: var(--bg-color);
+        }
+
+        .improvements-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .improvements-list {
+            list-style: none;
+        }
+
+        .improvements-list li {
+            background: var(--white);
+            padding: 20px 24px;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            padding-left: 48px;
+            position: relative;
+            font-size: 0.95rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+
+        .improvements-list li::before {
+            content: '\1F4AC';
+            position: absolute;
+            left: 16px;
+            top: 20px;
+        }
+
+        .improvements-note {
+            text-align: center;
+            margin-top: 24px;
+            font-weight: bold;
+            color: var(--main-color);
+        }
+
+        /* ===== FINAL CTA ===== */
+        .final-cta {
+            background: linear-gradient(135deg, #1a2a4a, #2d4a7a);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .final-cta h2 {
+            color: var(--white);
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+        }
+
+        .final-cta p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .final-cta .sns-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+
+        .final-cta .sns-link a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .final-cta .sns-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #111;
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.8rem;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-sub {
+                font-size: 1rem;
+            }
+
+            .hero-points {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .instructor-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .plan-price {
+                font-size: 2.8rem;
+            }
+
+            .comp-table {
+                font-size: 0.85rem;
+            }
+
+            .comp-table th,
+            .comp-table td {
+                padding: 10px 12px;
+            }
+
+            .voice-score .big-number {
+                font-size: 3rem;
+            }
+
+            .output-section {
+                padding: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.5rem;
+            }
+
+            .btn-cta {
+                padding: 14px 36px;
+                font-size: 1rem;
+            }
+
+            .instructor-card {
+                padding: 28px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">PHARMACIST CAMPUS</div>
+            <h1>
+                薬剤師の未来は、<br>
+                今の<span class="highlight">学び方</span>で決まる
+            </h1>
+            <p class="hero-sub">あなたの市場価値を高めるリスキリングサロン</p>
+            <p class="hero-copy">
+                「学ぶ」 x 「実践する」 → キャリアアップ<br>
+                学ぶだけで終わらない。価値を提供し、新たな市場価値を生み出す
+            </p>
+            <div class="hero-points">
+                <span class="hero-point"><span class="check">&#10003;</span> スキルを副収入に変える方法を学べる</span>
+                <span class="hero-point"><span class="check">&#10003;</span> 第一線の講師陣による直接指導</span>
+                <span class="hero-point"><span class="check">&#10003;</span> アウトプットの場を提供</span>
+            </div>
+            <a href="https://liff.line.me/2001786529-yE5VK0QL?product_id=18704&type=product-detail&ts=1779267175" class="btn-cta" target="_blank" rel="noopener noreferrer">入会する</a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about fade-in">
+        <div class="container">
+            <h2>薬剤師リスキリングサロンとは？</h2>
+            <div class="about-lead">
+                <p>薬剤師は生涯研鑽するべき職種と言われています。<br>実際に、生涯学習を目的とした各種専門・認定制度が存在しています。</p>
+                <span class="strong-line">ですが、現実はいかがでしょうか？</span>
+                <p><strong>薬剤師としてのスキルを高めても、<br>必ずしも報酬に反映されるわけではないという現実</strong>に不満を感じていませんか？</p>
+                <p>「薬剤師リスキリングサロン」では、従来の枠を超えた価値提供と新たな付加価値を身に着けるための学びの場を提供します。</p>
+                <p>在宅医療・薬局運営のスキルを学び、企業にとって希少性の高い薬剤師になることで有利な報酬交渉や転職ができるようになるでしょう。</p>
+                <p>保険調剤だけに依存せず、講演や出版、SNS発信、YouTube動画制作などを通じて、あなたの知識や経験を外部に発信し、自己ブランディングを行うことが可能です。</p>
+            </div>
+            <div class="about-features">
+                <div class="about-feature">
+                    <div class="about-feature-icon">&#128172;</div>
+                    <h3>グループチャットで交流</h3>
+                    <p>メンバーと講師を交え、日常的に相談・交流ができる環境</p>
+                </div>
+                <div class="about-feature">
+                    <div class="about-feature-icon">&#128218;</div>
+                    <h3>月1回の症例検討会</h3>
+                    <p>実践的なスキルアップを目指す。アーカイブ共有で取りこぼしなし</p>
+                </div>
+                <div class="about-feature">
+                    <div class="about-feature-icon">&#128640;</div>
+                    <h3>アウトプット重視</h3>
+                    <p>学んだことを即座に現場で活かせる。SNS・職場での発信を推奨</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAIN -->
+    <section class="pain fade-in">
+        <div class="container">
+            <h2>薬剤師の不安とその解決策</h2>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <span class="pain-icon">&#128204;</span>
+                    <div>
+                        <p class="problem">薬局業界の先行きが不安</p>
+                        <p class="solution">&#8594; 市場価値を高め、どこでも活躍できるスキルを習得</p>
+                    </div>
+                </div>
+                <div class="pain-card">
+                    <span class="pain-icon">&#128204;</span>
+                    <div>
+                        <p class="problem">在宅医療やオンライン服薬指導に取り組めていない</p>
+                        <p class="solution">&#8594; 最新の医療トレンドに対応するノウハウを提供</p>
+                    </div>
+                </div>
+                <div class="pain-card">
+                    <span class="pain-icon">&#128204;</span>
+                    <div>
+                        <p class="problem">患者さんや医師からもっと頼られるようになりたい</p>
+                        <p class="solution">&#8594; 実践的なコミュニケーションスキルを強化</p>
+                    </div>
+                </div>
+                <div class="pain-card">
+                    <span class="pain-icon">&#128204;</span>
+                    <div>
+                        <p class="problem">薬剤師年収が下がってきている</p>
+                        <p class="solution">&#8594; 副業やフリーランスとしての選択肢を開拓</p>
+                    </div>
+                </div>
+                <div class="pain-card">
+                    <span class="pain-icon">&#128204;</span>
+                    <div>
+                        <p class="problem">副業したいけど失敗したくない</p>
+                        <p class="solution">&#8594; 成功事例とノウハウを共有</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pain-footer">
+                <a href="#plan" class="btn-cta">このサロンで悩みを解決する</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="why fade-in">
+        <div class="container">
+            <h2>なぜこのコンテンツを提供するのか</h2>
+            <div class="why-content">
+                <div class="why-pillars">
+                    <div class="why-pillar">
+                        <div class="why-pillar-icon">&#128161;</div>
+                        <p>薬剤師の未来を変えるには、<strong>学びをアウトプットへ繋げること</strong>が必要</p>
+                    </div>
+                    <div class="why-pillar">
+                        <div class="why-pillar-icon">&#128170;</div>
+                        <p>講師陣も過去に同じ悩みを抱え、<strong>試行錯誤しながらキャリアを築いてきた</strong></p>
+                    </div>
+                    <div class="why-pillar">
+                        <div class="why-pillar-icon">&#127775;</div>
+                        <p>「こういう場があったらよかった」<strong>そんな想いでサロンを設立</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VOICE -->
+    <section class="voice fade-in">
+        <div class="container">
+            <h2>メンバーの声</h2>
+            <div class="voice-score">
+                <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div><span class="big-number">4.93</span><span class="score-unit"> / 5</span></div>
+                <p class="score-sub">92.86%が「5点満点」と回答</p>
+            </div>
+            <div class="voice-cards">
+                <div class="voice-card">
+                    <p>治療アルゴリズムをもとにした薬の中止提案が医師に通った。<strong>実践的で役に立つ。</strong></p>
+                </div>
+                <div class="voice-card">
+                    <p>視野が広がった。<strong>自分では考えつかないことに気づけた。</strong></p>
+                </div>
+                <div class="voice-card">
+                    <p>他の薬剤師の意見を聞いて、<strong>自分も頑張ろうという気持ちになれた。</strong></p>
+                </div>
+                <div class="voice-card">
+                    <p>TPNや輸液など、<strong>経験の少ない領域もケースで学べて良かった。</strong></p>
+                </div>
+                <div class="voice-card">
+                    <p>SNSや職場で<strong>アウトプットするモチベーションになっている。</strong></p>
+                </div>
+                <div class="voice-card">
+                    <p>症例はメンバーの持ち寄りだから、<strong>現場の悩みを相談できる。</strong>一人でどうやって勉強していいかわからない、そんな状態を解決できる。</p>
+                </div>
+            </div>
+            <div class="voice-output">
+                <h3>活用方法の分布（アウトプット先）</h3>
+                <div class="output-bars">
+                    <div class="output-bar">
+                        <div class="output-bar-label">服薬指導</div>
+                        <div class="output-bar-track"><div class="output-bar-fill" style="width:39.5%">39.5%</div></div>
+                    </div>
+                    <div class="output-bar">
+                        <div class="output-bar-label">SNSでの発信</div>
+                        <div class="output-bar-track"><div class="output-bar-fill" style="width:34.9%">34.9%</div></div>
+                    </div>
+                    <div class="output-bar">
+                        <div class="output-bar-label">職場や仲間との共有・指導</div>
+                        <div class="output-bar-track"><div class="output-bar-fill" style="width:25.6%">25.6%</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUTPUT -->
+    <section class="output fade-in">
+        <div class="container">
+            <h2>メンバーの発信を見てみましょう！</h2>
+            <div class="output-sections">
+                <div class="output-section">
+                    <h3><span class="icon">&#128214;</span> 月1回の症例検討会で実践力を強化</h3>
+                    <p>実際の症例をメンバー全員で持ち寄り、多職種連携の視点で深掘り議論。</p>
+                    <blockquote>処方を見直すときは、ゴール・優先順位・根拠・伝え方。この視点が大切。処方カスケードへのアプローチや減薬の注意点など、今日も学びが多かった。</blockquote>
+                    <blockquote>一番大事なのは介入した結果、患者がどうなるのか・またはどうなってほしいのか。必要な情報を多職種連携で収集し、根拠をもって提案に動く。</blockquote>
+                </div>
+                <div class="output-section">
+                    <h3><span class="icon">&#9889;</span> 即実践でスキルが身につく</h3>
+                    <p>サロンでの学びは、すぐに現場で活かせます。</p>
+                    <blockquote>ちょうどネオドパストンとマグミットの廃棄があったので、簡易懸濁法における配合変化を体験してみました！加水分解反応が進んでいく様子が確認できました。</blockquote>
+                    <blockquote>スタチンの重要性。心血管イベント既往やDM等の方は継続が推奨。エゼチミブはスタチンとの併用で効果を発揮。</blockquote>
+                </div>
+                <div class="output-section">
+                    <h3><span class="icon">&#129309;</span> 仲間との絆で学びを深める</h3>
+                    <p>経験の浅い方からベテランまで、メンバー同士の情報共有が悩みを解消し、成長を加速。オフ会も不定期開催！</p>
+                    <blockquote>オフ会なのに、うっかり学んじゃう。仲間と自然に学べる環境！</blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- URGENCY -->
+    <section class="urgency fade-in">
+        <div class="container">
+            <h2>なぜ今やるべきなのか</h2>
+            <div class="urgency-items">
+                <div class="urgency-item">
+                    <span class="urgency-icon">&#9888;&#65039;</span>
+                    <p>診療報酬の削減が進み、<strong>薬剤師の立場が厳しくなる未来</strong></p>
+                </div>
+                <div class="urgency-item">
+                    <span class="urgency-icon">&#9888;&#65039;</span>
+                    <p>オンライン化により、<strong>薬剤師も選ばれる時代に突入</strong></p>
+                </div>
+                <div class="urgency-item">
+                    <span class="urgency-icon">&#9888;&#65039;</span>
+                    <p><strong>「価値提供できる薬剤師」が生き残る</strong>時代へ</p>
+                </div>
+            </div>
+            <p class="urgency-cta">今、スキルを磨き、新たな収入源を手に入れましょう！</p>
+            <a href="#plan" class="btn-cta">入会する</a>
+        </div>
+    </section>
+
+    <!-- INSTRUCTOR -->
+    <section class="instructor fade-in">
+        <div class="container">
+            <h2>スペシャル講師</h2>
+            <div class="instructor-cards">
+                <div class="instructor-card">
+                    <div class="instructor-avatar">S</div>
+                    <p class="instructor-nickname">パッションモンスター</p>
+                    <p class="instructor-name">鈴木</p>
+                    <p class="instructor-bio">在宅医療特化型薬局「つなぐ薬局」在籍。施設往診同行や個人在宅訪問などで積極的に医師とコミュニケーションを行い、処方提案へとつなげている。CareNet.com「うまくいく！処方提案プラクティス」連載、調剤と情報「集まれ薬局1年生」連載。ファマキャン公式LINE質疑応答中！</p>
+                    <ul class="instructor-certs">
+                        <li>心不全療養指導士</li>
+                        <li>簡易懸濁法認定薬剤師</li>
+                        <li>地域薬学ケア専門薬剤師（暫定認定）</li>
+                        <li>日本アカデミックディテーリング認定薬剤師</li>
+                    </ul>
+                    <a href="https://x.com/phama_cam_movie" target="_blank" rel="noopener noreferrer" class="instructor-link">X公式アカウント &#8599;</a>
+                </div>
+                <div class="instructor-card">
+                    <div class="instructor-avatar">A</div>
+                    <p class="instructor-nickname">ブルーファイヤー</p>
+                    <p class="instructor-name">阿部</p>
+                    <p class="instructor-bio">北里大学北里研究所病院での2年間の薬剤師レジデントを経て同院入職。レジデント時代から約10年間、内科外科病棟を担当。2019年よりつなぐ薬局。日経DIで連載中！</p>
+                    <ul class="instructor-certs">
+                        <li>糖尿病薬物療法認定薬剤師</li>
+                        <li>日本糖尿病療養指導士</li>
+                        <li>医療薬学専門薬剤師</li>
+                        <li>地域薬学ケア専門薬剤師（暫定認定）</li>
+                    </ul>
+                    <p style="font-size:0.85rem; color:#666; margin-top:8px;">受賞歴：第4回日本くすりと糖尿病学会学術集会優秀演題賞</p>
+                    <a href="#" class="instructor-link">X公式アカウント &#8599;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARISON -->
+    <section class="comparison fade-in">
+        <div class="container">
+            <h2>他社との比較</h2>
+            <div class="comp-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>学習サービスA</th>
+                            <th>副業スクールB</th>
+                            <th class="ours">リスキリングサロン</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>月額費用</td>
+                            <td>1,760円~/講座</td>
+                            <td>4,980円~/月</td>
+                            <td class="ours">3,980円/月</td>
+                        </tr>
+                        <tr>
+                            <td>講師との距離</td>
+                            <td>一方向</td>
+                            <td>一方向</td>
+                            <td class="ours">双方向・直接指導</td>
+                        </tr>
+                        <tr>
+                            <td>認定研修会</td>
+                            <td>別料金</td>
+                            <td>なし</td>
+                            <td class="ours">何回でも無料</td>
+                        </tr>
+                        <tr>
+                            <td>アウトプット</td>
+                            <td>なし</td>
+                            <td>限定的</td>
+                            <td class="ours">即実践・発信支援</td>
+                        </tr>
+                        <tr>
+                            <td>薬剤師特化</td>
+                            <td>あり</td>
+                            <td>なし</td>
+                            <td class="ours">副業ノウハウも特化</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="advantages">
+                <div class="advantage">
+                    <div class="advantage-icon">&#128176;</div>
+                    <h3>コストパフォーマンス</h3>
+                    <p>月額3,980円で現役薬剤師から直接学べる。1回2,200円の認定研修会が何回でも無料</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage-icon">&#128218;</div>
+                    <h3>学びの深さ</h3>
+                    <p>双方向の学びと実践の場を提供。学習内容を即座にアウトプットに繋げられる</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage-icon">&#127919;</div>
+                    <h3>専門性</h3>
+                    <p>薬剤師特有のニーズに特化したスキルの習得や副業ノウハウを学べる</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLAN -->
+    <section class="plan fade-in" id="plan">
+        <div class="container">
+            <h2>プラン</h2>
+            <div class="plan-card">
+                <p class="plan-name">薬剤師リスキリングサロン メンバーシップ</p>
+                <p class="plan-title">メンバープラン</p>
+                <p class="plan-price">
+                    <span class="yen">&yen;</span>3,980<span class="per"> /月</span>
+                </p>
+                <div class="plan-bonus">認定単位発行研修会が何回でも無料！</div>
+                <ul class="plan-features">
+                    <li>グループチャットで講師・メンバーと交流</li>
+                    <li>月1回の症例検討会に参加</li>
+                    <li>アーカイブ動画の閲覧</li>
+                    <li>認定研修会に無料参加（通常1回2,200円）</li>
+                    <li>限定コンテンツの提供</li>
+                    <li>講師との共同プロジェクト参加</li>
+                </ul>
+                <a href="https://liff.line.me/2001786529-yE5VK0QL?product_id=18704&type=product-detail&ts=1779267175" class="btn-cta" id="join-btn" target="_blank" rel="noopener noreferrer">入会する</a>
+                <p class="plan-note">※ プレミアムプランはただいま募集を停止しております</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPROVEMENTS -->
+    <section class="improvements fade-in">
+        <div class="container">
+            <h2>メンバーからの改善点・要望</h2>
+            <div class="improvements-content">
+                <ul class="improvements-list">
+                    <li>より多くの疾患の症例を取り上げてほしい</li>
+                    <li>エビデンスや論文の調べ方を教えてほしい</li>
+                    <li>がん末期や服用薬剤調整支援料など、実務に即した内容も希望します！</li>
+                </ul>
+                <p class="improvements-note">より良い運営ができるよう、<br>こういった声もどんどんお待ちしております！</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>薬剤師リスキリングサロンに入会して、<br>一緒に高めあおう！</h2>
+            <p>あなたの薬剤師人生を、次のステージへ導きます</p>
+            <a href="https://liff.line.me/2001786529-yE5VK0QL?product_id=18704&type=product-detail&ts=1779267175" class="btn-cta" target="_blank" rel="noopener noreferrer">今すぐ入会する</a>
+            <p class="sns-link">
+                <br>Xの投稿画像や詳細なアウトプットは<br>
+                <a href="https://x.com/phama_cam_movie" target="_blank" rel="noopener noreferrer">公式Xアカウント</a>でチェック！
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>【特定商取引法に基づく表記】<br>販売事業者名：ワイズ株式会社</p>
+        <p style="margin-top:12px;">&copy; 2016 つなぐ薬局 All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
