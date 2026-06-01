@@ -651,13 +651,20 @@
             width: 160px;
             height: 160px;
             border-radius: 50%;
-            background: var(--accent-gradient);
+            background: #F0F4FF;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
             font-size: 3rem;
             color: var(--white);
+            overflow: hidden;
+        }
+
+        .instructor-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .instructor-nickname {
@@ -1344,7 +1351,7 @@
             <h2>スペシャル講師</h2>
             <div class="instructor-cards">
                 <div class="instructor-card">
-                    <div class="instructor-avatar">S</div>
+                    <div class="instructor-avatar"><img src="images/instructor-suzuki.jpg" alt="鈴木講師" width="160" height="160"></div>
                     <p class="instructor-nickname">パッションモンスター</p>
                     <p class="instructor-name">鈴木</p>
                     <p class="instructor-bio">在宅医療特化型薬局「つなぐ薬局」在籍。施設往診同行や個人在宅訪問などで積極的に医師とコミュニケーションを行い、処方提案へとつなげている。CareNet.com「うまくいく！処方提案プラクティス」連載、調剤と情報「集まれ薬局1年生」連載。ファマキャン公式LINE質疑応答中！</p>
@@ -1357,7 +1364,7 @@
                     <a href="https://x.com/phama_cam_movie" target="_blank" rel="noopener noreferrer" class="instructor-link">X公式アカウント &#8599;</a>
                 </div>
                 <div class="instructor-card">
-                    <div class="instructor-avatar">A</div>
+                    <div class="instructor-avatar"><img src="images/instructor-abe.jpg" alt="阿部講師" width="160" height="160"></div>
                     <p class="instructor-nickname">ブルーファイヤー</p>
                     <p class="instructor-name">阿部</p>
                     <p class="instructor-bio">北里大学北里研究所病院での2年間の薬剤師レジデントを経て同院入職。レジデント時代から約10年間、内科外科病棟を担当。2019年よりつなぐ薬局。日経DIで連載中！</p>
