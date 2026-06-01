@@ -15,15 +15,15 @@
     <style>
         :root {
             --main-color: #1a2a4a;
-            --accent-color: #5B7FFF;
-            --accent-hover: #4A6BE0;
-            --accent-gradient: linear-gradient(135deg, #5B7FFF, #8B5CF6);
-            --bg-color: #f8f7f4;
+            --accent-color: #2563EB;
+            --accent-hover: #1D4ED8;
+            --accent-gradient: linear-gradient(135deg, #2563EB, #3B82F6);
+            --bg-color: #F0F4FF;
             --white: #ffffff;
-            --text-color: #333333;
+            --text-color: #1E293B;
             --light-gray: #e0e0e0;
-            --cta-color: #F0883E;
-            --cta-hover: #E07B2A;
+            --cta-color: #DC2626;
+            --cta-hover: #B91C1C;
         }
 
         * {
@@ -52,12 +52,14 @@
         }
 
         h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 48px;
             color: var(--main-color);
             position: relative;
-            padding-bottom: 15px;
+            padding-bottom: 20px;
+            font-weight: 900;
+            letter-spacing: -0.02em;
         }
 
         h2::after {
@@ -66,9 +68,9 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background: var(--accent-gradient);
+            width: 48px;
+            height: 3px;
+            background: var(--accent-color);
             border-radius: 2px;
         }
 
@@ -76,22 +78,23 @@
             display: inline-block;
             background-color: var(--cta-color);
             color: var(--white);
-            padding: 18px 50px;
-            border-radius: 50px;
+            padding: 20px 56px;
+            border-radius: 100px;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
+            font-weight: 700;
+            font-size: 1.25rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(240, 136, 62, 0.3);
+            box-shadow: 0 4px 20px rgba(220, 38, 38, 0.35);
             text-align: center;
             border: none;
             cursor: pointer;
+            letter-spacing: 0.05em;
         }
 
         .btn-cta:hover {
             background-color: var(--cta-hover);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(240, 136, 62, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(220, 38, 38, 0.4);
         }
 
         .fade-in {
@@ -107,7 +110,7 @@
 
         /* ===== HERO ===== */
         .hero {
-            background: linear-gradient(135deg, #1a2a4a 0%, #2d4a7a 50%, #3d5a8a 100%);
+            background: linear-gradient(160deg, #0F172A 0%, #1E3A5F 40%, #1E40AF 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -121,18 +124,23 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at 30% 50%, rgba(91, 127, 255, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
-            animation: heroFloat 20s ease-in-out infinite;
+            top: -30%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
         }
 
-        @keyframes heroFloat {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(-20px, -20px); }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
         }
 
         .hero-content {
@@ -154,14 +162,15 @@
         }
 
         .hero-content h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            line-height: 1.4;
+            font-size: 3.2rem;
+            margin-bottom: 24px;
+            line-height: 1.3;
             font-weight: 900;
+            letter-spacing: -0.02em;
         }
 
         .hero-content h1 .highlight {
-            color: var(--accent-color);
+            color: #60A5FA;
         }
 
         .hero-sub {
@@ -218,6 +227,22 @@
             margin: 20px 0;
         }
 
+        .about-visual {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        .about-visual img {
+            width: 160px;
+            height: auto;
+            flex-shrink: 0;
+        }
+        .about-visual-text {
+            flex: 1;
+        }
+
         .about-features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -226,11 +251,16 @@
         }
 
         .about-feature {
-            background: linear-gradient(135deg, #f0f4ff, #f8f7f4);
-            padding: 30px;
-            border-radius: 16px;
+            background: var(--white);
+            padding: 32px;
+            border-radius: 12px;
             text-align: center;
-            border: 1px solid rgba(91, 127, 255, 0.1);
+            border: 1px solid #E2E8F0;
+            transition: box-shadow 0.2s;
+        }
+
+        .about-feature:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         }
 
         .about-feature-icon {
@@ -262,15 +292,24 @@
             margin: 0 auto 40px;
         }
 
+        .pain-visual {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .pain-visual img {
+            max-width: 180px;
+            height: auto;
+        }
+
         .pain-card {
             background-color: var(--white);
             padding: 24px 30px;
-            border-left: 5px solid var(--accent-color);
+            border-left: 4px solid var(--accent-color);
             border-radius: 8px;
             display: flex;
             align-items: flex-start;
             gap: 16px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
         }
 
         .pain-icon {
@@ -377,17 +416,17 @@
         }
 
         .voice-card {
-            background: #f8f9ff;
+            background: var(--bg-color);
             padding: 28px;
-            border-radius: 16px;
+            border-radius: 12px;
             position: relative;
-            border: 1px solid rgba(91, 127, 255, 0.1);
+            border: none;
         }
 
         .voice-card::before {
             content: '\201C';
             font-size: 4rem;
-            color: rgba(91, 127, 255, 0.15);
+            color: rgba(37, 99, 235, 0.12);
             position: absolute;
             top: 8px;
             left: 16px;
@@ -721,7 +760,7 @@
         }
 
         .comp-table tbody td.ours {
-            background: rgba(91, 127, 255, 0.05);
+            background: rgba(37, 99, 235, 0.05);
             font-weight: bold;
             color: var(--accent-color);
         }
@@ -768,11 +807,11 @@
         .plan-card {
             max-width: 500px;
             margin: 0 auto 30px;
-            background: linear-gradient(135deg, #f0f4ff, #f8f7ff);
-            border-radius: 24px;
+            background: var(--white);
+            border-radius: 16px;
             padding: 50px 40px;
             border: 2px solid var(--accent-color);
-            box-shadow: 0 8px 30px rgba(91, 127, 255, 0.15);
+            box-shadow: 0 4px 24px rgba(37, 99, 235, 0.12);
         }
 
         .plan-name {
@@ -830,7 +869,7 @@
             padding-left: 28px;
             position: relative;
             font-size: 0.95rem;
-            border-bottom: 1px solid rgba(91, 127, 255, 0.1);
+            border-bottom: 1px solid rgba(37, 99, 235, 0.1);
         }
 
         .plan-features li::before {
@@ -962,7 +1001,12 @@
             }
 
             h2 {
-                font-size: 1.5rem;
+                font-size: 1.75rem;
+            }
+
+            .about-visual {
+                flex-direction: column;
+                text-align: center;
             }
 
             .instructor-cards {
@@ -993,7 +1037,7 @@
 
         @media (max-width: 480px) {
             .hero-content h1 {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
 
             .btn-cta {
@@ -1035,10 +1079,15 @@
     <section class="about fade-in">
         <div class="container">
             <h2>薬剤師リスキリングサロンとは？</h2>
+            <div class="about-visual">
+                <img src="images/pharmacist-woman.jpg" alt="薬剤師のイラスト" loading="lazy" width="160" height="195">
+                <div class="about-visual-text">
+                    <p>薬剤師は生涯研鑽するべき職種と言われています。<br>実際に、生涯学習を目的とした各種専門・認定制度が存在しています。</p>
+                    <span class="strong-line">ですが、現実はいかがでしょうか？</span>
+                    <p><strong>薬剤師としてのスキルを高めても、<br>必ずしも報酬に反映されるわけではないという現実</strong>に不満を感じていませんか？</p>
+                </div>
+            </div>
             <div class="about-lead">
-                <p>薬剤師は生涯研鑽するべき職種と言われています。<br>実際に、生涯学習を目的とした各種専門・認定制度が存在しています。</p>
-                <span class="strong-line">ですが、現実はいかがでしょうか？</span>
-                <p><strong>薬剤師としてのスキルを高めても、<br>必ずしも報酬に反映されるわけではないという現実</strong>に不満を感じていませんか？</p>
                 <p>「薬剤師リスキリングサロン」では、従来の枠を超えた価値提供と新たな付加価値を身に着けるための学びの場を提供します。</p>
                 <p>在宅医療・薬局運営のスキルを学び、企業にとって希少性の高い薬剤師になることで有利な報酬交渉や転職ができるようになるでしょう。</p>
                 <p>保険調剤だけに依存せず、講演や出版、SNS発信、YouTube動画制作などを通じて、あなたの知識や経験を外部に発信し、自己ブランディングを行うことが可能です。</p>
@@ -1067,6 +1116,9 @@
     <section class="pain fade-in">
         <div class="container">
             <h2>薬剤師の不安とその解決策</h2>
+            <div class="pain-visual">
+                <img src="images/pharmacist-visit.jpg" alt="訪問薬剤師のイラスト" loading="lazy" width="180" height="298">
+            </div>
             <div class="pain-grid">
                 <div class="pain-card">
                     <span class="pain-icon">&#128204;</span>
